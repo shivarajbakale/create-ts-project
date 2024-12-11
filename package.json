@@ -1,31 +1,37 @@
 {
-  "name": "@shivarajbakale/create-ts-project",
-  "version": "1.0.2",
-  "description": "CLI tool to generate TypeScript projects",
-  "main": "index.js",
+  "name": "create-ts-crawler",
+  "version": "1.0.0",
+  "description": "CLI tool to create TypeScript crawler/scraper boilerplate",
+  "main": "dist/index.js",
   "bin": {
-    "create-ts-project": "./index.js"
+    "create-ts-crawler": "./dist/index.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "scrape": "ts-node src/scraper/index.ts",
+    "crawl": "ts-node src/crawler/index.ts",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate dev"
   },
   "keywords": [
+    "crawler",
+    "scraper",
     "typescript",
-    "generator",
-    "cli",
-    "project",
-    "template"
+    "boilerplate"
   ],
-  "author": "Shivaraj Bakale shivarajapple@gmail.com",
+  "author": "",
   "license": "MIT",
   "dependencies": {
-    "typescript": "^5.0.0",
-    "@types/node": "^20.0.0",
-    "ts-node": "^10.9.0",
-    "ts-node-dev": "^2.0.0"
+    "@prisma/client": "^5.10.2",
+    "cheerio": "^1.0.0-rc.12",
+    "puppeteer": "^22.3.0",
+    "cli-progress": "^3.12.0"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/yourusername/create-ts-project.git"
+  "devDependencies": {
+    "@types/cli-progress": "^3.11.5",
+    "@types/node": "^20.11.24",
+    "prisma": "^5.10.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
   }
 }
