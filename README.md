@@ -14,7 +14,7 @@ This project is a template for creating a new TypeScript project. It includes al
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/your-username/create-ts-project.git
+    git clone https://github.com/your-username/create-ts-crawler.git
     ```
 
 2. Install dependencies:
